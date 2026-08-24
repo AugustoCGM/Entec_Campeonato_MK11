@@ -684,3 +684,18 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     font-family: var(--font-title);
     letter-spacing: 1px;
 }
+
+/* =========================================
+   RESPONSIVIDADE MOBILE: OCULTAR HERO LATERAL E CHAVEAMENTO
+========================================= */
+@media (max-width: 900px) {
+    /* Oculta os personagens de corpo todo na Hero Section */
+    .portrait {
+        display: none !important;
+    }
+
+    /* Oculta a seção de simulação do chaveamento e as laterais */
+    .bracket-section {
+        display: none !important;
+    }
+}
