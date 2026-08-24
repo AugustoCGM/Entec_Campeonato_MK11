@@ -686,31 +686,40 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
 }
 
 /* =========================================
-   RESPONSIVIDADE MOBILE: OCULTAR HERO LATERAL E CHAVEAMENTO
+   RESPONSIVIDADE MOBILE: HERO E CHAVEAMENTO
 ========================================= */
 @media (max-width: 900px) {
-    /* Oculta os personagens de corpo todo na Hero Section */
-    .portrait {
-        display: none !important;
-    }
-
-    /* Oculta a seção de simulação do chaveamento e as laterais */
-    .bracket-section {
-        display: none !important;
-    }
-}
-
-/* =========================================
-   RESPONSIVIDADE MOBILE: GRID DE 3x2 NO HERO
-========================================= */
-@media (max-width: 900px) {
-    /* Transforma a linha de personagens em um bloco que permite quebra de linha */
+    /* 1. Garante que o grid forme exatamente 3 em cima e 3 embaixo */
     .roster-row {
         display: flex;
-        flex-wrap: wrap; /* Permite que os itens quebrem de linha */
-        justify-content: center; /* Centraliza os avatares */
-        max-width: 230px; /* Limita a largura para caber exatamente 3 avatares por linha (considerando o gap) */
-        gap: 8px; /* Espaçamento uniforme entre os slots */
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 240px; /* Largura exata para caber 3 caixas de 65px + gaps */
+        gap: 8px;
+        padding: 0; /* Remove o padding que estava quebrando a linha */
         margin: 0 auto 20px auto;
+    }
+
+    /* 2. Traz os personagens de corpo inteiro de volta nas laterais */
+    .portrait {
+        display: flex !important; /* Sobrescreve a regra de ocultar */
+        width: 35%; /* Ocupam as laterais vazias */
+        height: 55%; /* Ficam limitados à metade de baixo da tela */
+        z-index: 1; /* Ficam atrás do grid para não atrapalhar o clique */
+        opacity: 0.7; /* Leve transparência para integrar com o fundo escuro */
+    }
+
+    /* Cola eles nas bordas extremas */
+    .p1-portrait { left: -5%; }
+    .p2-portrait { right: -5%; }
+
+    /* 3. Garante que a área central (botões e grid) fique na frente */
+    .roster-center {
+        z-index: 5;
+    }
+
+    /* 4. Oculta apenas o chaveamento complexo no celular */
+    .bracket-section {
+        display: none !important;
     }
 }
