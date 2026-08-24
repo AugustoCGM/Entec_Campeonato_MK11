@@ -263,20 +263,60 @@ h1, h2, h3, h4 { font-family: var(--font-title); color: var(--color-gold); text-
 .box { background: var(--color-box-bg); border: 1px solid #3A3A3A; border-top: 3px solid var(--color-gold-dark); padding: 40px; }
 .box h2 { margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 15px; }
 .box p { margin-bottom: 20px; font-size: 1.2rem; line-height: 1.6; }
-.grid-regras { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 40px; }
-.card { background: #111; border: 1px solid #222; border-left: 4px solid var(--color-blood); padding: 30px 20px; transition: transform 0.3s, border-color 0.3s; }
-.card:hover { transform: translateY(-5px); border-color: var(--color-gold); border-left-color: var(--color-gold); }
-.card h3 { font-size: 1.3rem; margin-bottom: 10px; }
-.card p { font-size: 1.1rem; }
+
+.grid-regras { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px; 
+    margin-top: 40px; 
+}
+
+.card { 
+    background: #111; 
+    border: 1px solid #222; 
+    border-left: 4px solid var(--color-blood); 
+    padding: 25px 20px; 
+    transition: transform 0.3s, border-color 0.3s; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--color-gold); 
+    border-left-color: var(--color-gold); 
+}
+
+.card-text {
+    flex: 1; 
+}
+
+.card h3 { font-size: 1.3rem; margin-bottom: 5px; }
+.card p { font-size: 1.1rem; margin: 0; }
+
+.card-icon {
+    width: 45px; 
+    height: 45px;
+    object-fit: contain; 
+    opacity: 0.5; 
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-icon {
+    opacity: 1;
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgba(207, 163, 72, 0.6));
+}
+
 footer { text-align: center; padding: 30px; background: #080808; border-top: 1px solid #222; color: #666; font-family: var(--font-title); }
 
 /* =========================================
    7. CHAVEAMENTO VERTICAL E GUIDE LINES (GRID MATEMÁTICO)
 ========================================= */
-.bracket-section {
-    background: #050505;
-    padding: 60px 20px;
-    border-top: 2px solid var(--color-gold-dark);
+
+.roster-center {
+    z-index: 5;
 }
 
 /* Novo título maior e mais próximo do chaveamento */
@@ -294,7 +334,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Reduzido para colar no título */
+    margin-top: 10px; 
     height: 720px; 
     position: relative;
     overflow: hidden;
@@ -305,7 +345,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 820px; /* Reduzido para afastar das caixas laterais */
+    max-width: 820px; 
     background: var(--color-box-bg);
     padding: 30px 15px;
     border: 1px solid #333;
@@ -333,7 +373,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
 .lines-row {
     display: flex;
     width: 100%;
-    height: 35px; /* Altura da linha conectora para não invadir cards */
+    height: 35px; 
 }
 
 .fork-up {
@@ -480,7 +520,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
 .team-showcase {
     position: absolute;
     top: 0;
-    width: 280px; /* Largura fixa e segura para caber totalmente na tela */
+    width: 280px; 
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -489,10 +529,9 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     transition: all 0.6s ease;
     opacity: 0;
     pointer-events: none;
-    z-index: 2; /* Fica atrás da árvore central */
+    z-index: 2; 
 }
 
-/* Afasta das bordas extremas da tela para evitar que sejam cortadas */
 .left-showcase { left: 15px; }
 .right-showcase { right: 15px; }
 
@@ -503,7 +542,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
 ------------------------------------- */
 .fighter-box {
     width: 100%;
-    aspect-ratio: 2 / 1; /* Mantém a proporção exata de 512x256 */
+    aspect-ratio: 2 / 1; 
     position: relative;
     overflow: hidden;
     display: flex;
@@ -514,7 +553,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     background-position: center;
     border: 3px solid #333; 
     border-radius: 6px;
-    margin-bottom: 12px; /* Espaço uniforme entre o Player 1 e o Player 2 */
+    margin-bottom: 12px; 
     transition: all 0.5s ease;
 }
 
@@ -569,7 +608,6 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     transform: scale(1.05);
 }
 
-/* SELO WINS - Centralizado exatamente sobre a divisão das duas caixas */
 .wins-stamp {
     position: absolute;
     top: 50%; 
@@ -596,7 +634,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
 ========================================= */
 .arena-guide-text {
     max-width: 900px;
-    margin: 25px auto 0 auto; /* Reduzido para colar na arena */
+    margin: 25px auto 0 auto; 
     background: var(--color-box-bg);
     border: 1px solid #333;
     border-top: 3px solid var(--color-blood);
@@ -694,19 +732,19 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 240px; /* Largura exata para caber 3 caixas de 65px + gaps */
+        max-width: 240px; 
         gap: 8px;
-        padding: 0; /* Remove o padding que estava quebrando a linha */
+        padding: 0; 
         margin: 0 auto 20px auto;
     }
 
     /* 2. Traz os personagens de corpo inteiro de volta nas laterais */
     .portrait {
-        display: flex !important; /* Sobrescreve a regra de ocultar */
-        width: 35%; /* Ocupam as laterais vazias */
-        height: 55%; /* Ficam limitados à metade de baixo da tela */
-        z-index: 1; /* Ficam atrás do grid para não atrapalhar o clique */
-        opacity: 0.7; /* Leve transparência para integrar com o fundo escuro */
+        display: flex !important; 
+        width: 35%; 
+        height: 55%; 
+        z-index: 1; 
+        opacity: 0.7; 
     }
 
     /* Cola eles nas bordas extremas */
@@ -719,7 +757,7 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     }
 
     /* 4. Oculta apenas o chaveamento complexo no celular */
-    .bracket-section {
+    .vertical-arena {
         display: none !important;
     }
 }
