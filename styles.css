@@ -699,3 +699,18 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
         display: none !important;
     }
 }
+
+/* =========================================
+   RESPONSIVIDADE MOBILE: GRID DE 3x2 NO HERO
+========================================= */
+@media (max-width: 900px) {
+    /* Transforma a linha de personagens em um bloco que permite quebra de linha */
+    .roster-row {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem de linha */
+        justify-content: center; /* Centraliza os avatares */
+        max-width: 230px; /* Limita a largura para caber exatamente 3 avatares por linha (considerando o gap) */
+        gap: 8px; /* Espaçamento uniforme entre os slots */
+        margin: 0 auto 20px auto;
+    }
+}
