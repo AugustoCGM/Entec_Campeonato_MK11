@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTEC GAMER | Mortal Kombat 11</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER (Menu Fixo e Sólido no Topo) -->
+    <nav id="sticky-header" class="sticky-header">
+        <div class="header-left">
+            <img src="assets/Nassau_logo.png" alt="UNINASSAU" class="header-logo nassau-logo">
+            <img src="assets/Logo V1.png" alt="JAM Labs" class="header-logo jam-logo">
+        </div>
+        
+        <div class="header-center">
+            <img src="assets/mk11-logo.png" alt="Mortal Kombat 11" class="header-mk-logo">
+        </div>
+
+        <div class="header-right">
+            <!-- Botão oculto no topo que aparece no scroll -->
+            <a href="https://www.even3.com.br/entec-gamer-771863/" class="btn-kombat btn-header" id="btn-header-inscricao">INSKREVA-SE</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="roster-hero" id="hero-section">
+        
+        <!-- PERSONAGEM JOGADOR 1 (ESQUERDA) -->
+        <div class="portrait p1-portrait">
+            <img id="p1-img" src="" alt="Player 1">
+            <div class="portrait-overlay"></div>
+        </div>
+
+        <!-- CONTEÚDO CENTRAL -->
+        <div class="roster-center">
+
+            <!-- TÍTULOS -->
+            <div class="title-group">
+                <h4>ENTEC UNINASSAU 2026</h4>
+                <h1>KAMPEONATO<br>MORTAL KOMBAT 11</h1>
+                <p class="hero-date">UNINASSAU Campina Grande | 25 de Setembro de 2026</p>
+            </div>
+
+            <!-- BOTÃO ACIMA DO GRID -->
+            <a href="https://www.even3.com.br/entec-gamer-771863/" class="btn-kombat" id="btn-inscricao">INSKREVA-SE AGORA</a>
+
+            <!-- GRID DE PERSONAGENS (EM LINHA) -->
+            <div class="roster-row" id="roster-grid">
+                <!-- Injetado via JS -->
+            </div>
+
+            <!-- TEXTO DE VS -->
+            <div class="vs-text">
+                <span id="p1-name" class="name-p1">Scorpion</span> 
+                <span class="vs">VS</span> 
+                <span id="p2-name" class="name-p2">subzero</span>
+            </div>
+
+        </div>
+
+        <!-- PERSONAGEM JOGADOR 2 (DIREITA) -->
+        <div class="portrait p2-portrait">
+            <img id="p2-img" src="" alt="Player 2">
+            <div class="portrait-overlay"></div>
+        </div>
+        
+    </header>
+
+    <!-- SOBRE O EVENTO -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="box">
+                <h2>Test Your Might!</h2>
+                <p>O <strong>ENTEC UNINASSAU 2026</strong> traz uma programação focada em inovação, tecnologia e integração estudantil. Como uma das atrações principais do evento, os portais do <em>Earthrealm</em> se abrem para o <strong>Kampeonato de Mortal Kombat 11</strong> — uma arena oficial de disputa eletrônica onde estratégia, reflexo e trabalho em equipe definirão os grandes campeões da noite.</p>
+                <p>A atividade tem como objetivo promover a integração da comunidade acadêmica por meio dos e-sports, estimulando a tomada de decisão rápida, concentração e a competitividade saudável em um ambiente dinâmico e interativo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGRAS E INFO -->
+    <section class="regras">
+        <div class="container">
+             <h2>Regras da Arena & Formato</h2>
+             <div class="grid-regras">
+                 <div class="card">
+                     <h3>Jogo</h3>
+                     <p>Mortal Kombat 11</p>
+                 </div>
+                 <div class="card">
+                     <h3>Formato</h3>
+                     <p>Duplas (Tag Team)</p>
+                 </div>
+                 <div class="card">
+                     <h3>Local</h3>
+                     <p>UNINASSAU - PB</p>
+                 </div>
+                 <div class="card">
+                     <h3>Horário</h3>
+                     <p>18h às 21h</p>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- SIMULAÇÃO DE CHAVEAMENTO VERTICAL E GUIA DA ARENA -->
+    <section class="bracket-section" id="chaveamento">
+        <div class="container" style="max-width: 1400px;">
+            
+            <!-- TÍTULO ATUALIZADO COM A NOVA CLASSE -->
+            <h2 class="arena-title">Guia da Arena: Como Funciona o Kampeonato</h2>
+            
+            <div class="arena-display vertical-arena">
+                <!-- Equipe Esquerda (Simulação Lateral) -->
+                <div class="team-showcase left-showcase" id="showcase-left">
+                    <div class="fighter-box top-box">
+                        <img class="char-render char1" src="" alt="">
+                    </div>
+                    <div class="fighter-box bottom-box">
+                        <img class="char-render char2" src="" alt="">
+                    </div>
+                    <img class="wins-stamp" src="assets/wins-stamp.png" alt="WINS">
+                </div>
+
+                <!-- Chaveamento Central -->
+                <div class="bracket-ui" id="bracket-ui">
+                    <div class="vertical-tree">
+                        
+                        <div class="match-label" id="round-label">QUARTAS DE FINAL</div>
+
+                        <!-- CAMADA 1: CAMPEÃO -->
+                        <div class="tier-row">
+                            <div class="slot"><div class="bracket-box champ-box" id="champ-box"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                        </div>
+
+                        <!-- LINHAS 3 -->
+                        <div class="lines-row">
+                            <div class="fork-up"><div class="line-left" id="path-f1"></div><div class="line-right" id="path-f2"></div><div class="line-center" id="path-champ"></div></div>
+                        </div>
+
+                        <!-- CAMADA 2: FINAIS -->
+                        <div class="tier-row">
+                            <div class="slot"><div class="bracket-box" id="box-f1"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-f2"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                        </div>
+
+                        <!-- LINHAS 2 -->
+                        <div class="lines-row">
+                            <div class="fork-up"><div class="line-left" id="path-s1"></div><div class="line-right" id="path-s2"></div><div class="line-center" id="path-f1-up"></div></div>
+                            <div class="fork-up"><div class="line-left" id="path-s3"></div><div class="line-right" id="path-s4"></div><div class="line-center" id="path-f2-up"></div></div>
+                        </div>
+
+                        <!-- CAMADA 3: SEMIFINAIS -->
+                        <div class="tier-row">
+                            <div class="slot"><div class="bracket-box" id="box-s1"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-s2"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-s3"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-s4"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                        </div>
+
+                        <!-- LINHAS 1 -->
+                        <div class="lines-row">
+                            <div class="fork-up"><div class="line-left" id="path-q1"></div><div class="line-right" id="path-q2"></div><div class="line-center" id="path-s1-up"></div></div>
+                            <div class="fork-up"><div class="line-left" id="path-q3"></div><div class="line-right" id="path-q4"></div><div class="line-center" id="path-s2-up"></div></div>
+                            <div class="fork-up"><div class="line-left" id="path-q5"></div><div class="line-right" id="path-q6"></div><div class="line-center" id="path-s3-up"></div></div>
+                            <div class="fork-up"><div class="line-left" id="path-q7"></div><div class="line-right" id="path-q8"></div><div class="line-center" id="path-s4-up"></div></div>
+                        </div>
+
+                        <!-- CAMADA 4: QUARTAS DE FINAL -->
+                        <div class="tier-row">
+                            <div class="slot"><div class="bracket-box" id="box-q1"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q2"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q3"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q4"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q5"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q6"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q7"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                            <div class="slot"><div class="bracket-box" id="box-q8"><div class="box-fighter f1"><img src="" alt=""></div><div class="box-fighter f2"><img src="" alt=""></div></div></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Equipe Direita -->
+                <div class="team-showcase right-showcase" id="showcase-right">
+                    <div class="fighter-box top-box">
+                        <img class="char-render char1" src="" alt="">
+                    </div>
+                    <div class="fighter-box bottom-box">
+                        <img class="char-render char2" src="" alt="">
+                    </div>
+                    <img class="wins-stamp" src="assets/wins-stamp.png" alt="WINS">
+                </div>
+            </div>
+
+            <!-- NOVA SEÇÃO: TEXTO EXPLICATIVO -->
+            <div class="arena-guide-text">
+                <h3>Regras do Kombate</h3>
+                <p>Guerreiros do <em>Earthrealm</em>, preparem-se para cruzar os portais e testar seus limites! No <strong>Kampeonato de Mortal Kombat 11 do ENTEC UNINASSAU 2026</strong>, a glória suprema não depende apenas de um único lutador, mas da sintonia e da estratégia implacável entre parceiros de equipe.</p>
+                
+                <ul class="kombat-rules-list">
+                    <li><strong>Formato Tag Team (Confrontos em Duplas):</strong> A disputa é feita em duplas. O trabalho em equipe, a escolha dos lutadores e a execução técnica em conjunto serão cruciais para ditar o ritmo da partida.</li>
+                    <li><strong>Sistema de Batalha (Melhor de 3):</strong> Cada confronto do chaveamento será decidido no sistema de <strong>Melhor de 3</strong>. A dupla que garantir duas vitórias primeiro avança rumo à próxima fase; os derrotados darão adeus à chave principal.</li>
+                    <li><strong>A Recompensa dos Campeões:</strong> Apenas uma dupla resistirá à pressão da Grande Final. Os vencedores que conquistarem o topo absoluto e ouvirem o icônico <em>"Flawless Victory"</em> levarão para casa uma <strong>premiação exclusiva</strong> ao término da competição!</li>
+                </ul>
+                
+                <p class="final-call"><em>Test Your Might!</em> Konvoque sua dupla, alinhe sua estratégia e prepare-se para buscar a glória absoluta.<br><strong>INSKREVA SUA DUPLA E PROVE SEU VALOR NO KOMBATE!</strong></p>
+            </div>
+            <!-- FIM DA SEÇÃO DE TEXTO -->
+
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 ENTEC UNINASSAU. Prepare sua dupla.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+Você precisa exportar os seguintes arquivos do Figma para esta pasta:
+
+Ícones de Marcação:
+- marker-p1.png (O ícone/losango que indica o Player 1)
+- marker-p2.png (O ícone/losango que indica o Player 2)
+
+Avatares (Rostos no Grid):
+- avatar-1.png (Scorpion)
+- avatar-2.png
+- avatar-3.png
+... até o avatar-6.png
+
+Personagens de Corpo Inteiro:
+- full-1.png (Scorpion)
+- full-2.png
+... até o full-6.png
