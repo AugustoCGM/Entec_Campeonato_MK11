@@ -205,7 +205,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'url("assets/arena-1.jpg")',
         'url("assets/arena-2.jpg")',
         'url("assets/arena-3.jpg")',
-        'url("assets/arena-4.jpg")'
+        'url("assets/arena-4.jpg")',
+        'url("assets/arena-5.jpg")',
+        'url("assets/arena-6.jpg")',
+        'url("assets/arena-7.jpg")',
+        'url("assets/arena-8.jpg")',
+        'url("assets/arena-9.jpg")',
+        'url("assets/arena-10.jpg")'
     ];
     
     const masterPool = [
@@ -313,10 +319,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const rightBottom = uiRight.querySelector('.bottom-box');
 
             if (leftTop && leftBottom && rightTop && rightBottom) {
-                leftTop.style.backgroundImage = arenaBgs[Math.floor(Math.random() * arenaBgs.length)];
-                leftBottom.style.backgroundImage = arenaBgs[Math.floor(Math.random() * arenaBgs.length)];
-                rightTop.style.backgroundImage = arenaBgs[Math.floor(Math.random() * arenaBgs.length)];
-                rightBottom.style.backgroundImage = arenaBgs[Math.floor(Math.random() * arenaBgs.length)];
+                // Sorteia uma arena para a dupla 1 (Topo)
+                let bgIndex1 = Math.floor(Math.random() * arenaBgs.length);
+                
+                // Sorteia uma arena DIFERENTE para a dupla 2 (Fundo)
+                let bgIndex2;
+                do {
+                    bgIndex2 = Math.floor(Math.random() * arenaBgs.length);
+                } while (bgIndex2 === bgIndex1);
+
+                const bgP1 = arenaBgs[bgIndex1];
+                const bgP2 = arenaBgs[bgIndex2];
+
+                // Os Jogadores 1 (Equipe Esquerda e Direita) lutam na mesma arena
+                leftTop.style.backgroundImage = bgP1;
+                rightTop.style.backgroundImage = bgP1;
+
+                // Os Jogadores 2 (Equipe Esquerda e Direita) lutam na segunda arena
+                leftBottom.style.backgroundImage = bgP2;
+                rightBottom.style.backgroundImage = bgP2;
             }
 
             uiLeft.className = "team-showcase left-showcase active";

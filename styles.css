@@ -652,14 +652,15 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
     transform: scale(1.05);
 }
 
+/* SELO WINS - Posicionado no topo das caixas dos lutadores */
 .wins-stamp {
     position: absolute;
-    top: 50%; 
+    top: calc(50% - 190px); /* Empurra o selo exatamente para o topo do Jogador 1 */
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
     z-index: 30;
-    width: 220px;
+    width: 190px; /* Levemente menor para um encaixe mais elegante no topo */
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     filter: drop-shadow(0 10px 25px rgba(0,0,0,0.9));
 }
