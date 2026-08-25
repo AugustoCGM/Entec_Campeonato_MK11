@@ -516,38 +516,46 @@ footer { text-align: center; padding: 30px; background: #080808; border-top: 1px
 }
 
 /* =========================================
-   7.5. SEPARAÇÃO DAS QUARTAS DE FINAL (FLEXBOX MATH)
+   7.5. SEPARAÇÃO DAS QUARTAS DE FINAL (CORRIGIDO)
 ========================================= */
-/* 1. Adiciona um espaçamento real na direita de cada duelo (após o 2º, 4º e 6º lutador) */
+
+/* Espaçamento extra (gap) para separar os DUELOS de forma simétrica */
+.tier-row:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 1px; /* Gap base */
+}
+
+/* Adiciona margem entre as DUPLAS (Luta 1 e Luta 2, Luta 3 e Luta 4) */
 .tier-row:last-of-type .slot:nth-child(2),
 .tier-row:last-of-type .slot:nth-child(4),
 .tier-row:last-of-type .slot:nth-child(6) {
-    margin-right: 25px; 
+    margin-right: 18px; 
 }
 
-/* 2. Aplica o EXATO mesmo espaçamento nas camadas de linhas conectores */
+/* Alinha exatamente as linhas guias com os espaços gerados acima */
+.lines-row:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .lines-row:last-of-type .fork-up:nth-child(1),
 .lines-row:last-of-type .fork-up:nth-child(2),
 .lines-row:last-of-type .fork-up:nth-child(3) {
-    margin-right: 25px; 
+    margin-right: 18px; 
 }
 
-/* IMPORTANTE: Desfaz qualquer recálculo ou position relative da tentativa anterior */
-.tier-row:last-of-type .slot:nth-child(odd) .bracket-box,
-.tier-row:last-of-type .slot:nth-child(even) .bracket-box {
-    position: static;
-    left: auto;
-    right: auto;
+/* Previne que as caixas da base encolham abaixo do tamanho necessário */
+.bracket-box {
+    min-width: 65px;
+    z-index: 12;
 }
 
-.lines-row:last-of-type .line-left {
-    left: 25%;
-    width: 25%;
-}
-
-.lines-row:last-of-type .line-right {
-    right: 25%;
-    width: 25%;
+/* Ajusta o Z-Index durante a animação para o card sempre pular para a frente */
+.bracket-box.active-match, 
+.bracket-box.winner-box {
+    z-index: 25; 
+    transform: scale(1.1); /* Um pouco menor o scale para não vazar a borda */
 }
 
 /* =========================================
