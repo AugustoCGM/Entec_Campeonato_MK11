@@ -8,7 +8,7 @@ Landing page promocional e simulador dinâmico de torneio de e-sports desenvolvi
 
 ## 🎮 Sobre o Projeto
 
-O objetivo desta página é divulgar o torneio, apresentar as regras do formato "Tag Team" (Duplas) e fornecer um link direto para as inscrições. O grande diferencial técnico do projeto é a **Simulação de Arena**: uma árvore de chaveamento (*bracket*) totalmente construída em CSS Flexbox e animada com JavaScript, que simula o andamento do campeonato até a Grande Final.
+O objetivo desta página é divulgar o torneio, apresentar as regras do formato "Tag Team" (Duplas) e fornecer um link direto para as inscrições. O grande diferencial técnico do projeto é a **Simulação de Arena**: uma árvore de chaveamento totalmente construída em CSS Flexbox e animada com JavaScript, que simula o andamento do campeonato até a Grande Final.
 
 ## ✨ Funcionalidades Principais
 
